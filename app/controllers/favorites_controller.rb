@@ -1,8 +1,12 @@
 class FavoritesController < ApplicationController
     
+    def index
+        favorites = Favorite.all
+        render json: favorites
+    end
 
     def create 
-        Favorite.create(user_id: params[:user_id], drink_id: params[:drink_id])
+        Favorite.find_or_create_by(user_id: params[:user_id], drink_id: params[:drink_id])
     end
 
     def delete

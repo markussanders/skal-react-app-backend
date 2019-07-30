@@ -40,6 +40,11 @@ Drink.create(name: 'Gin Martini',
 )
 
 
+Favorite.create(user_id: 1, drink_id: 3)
+Favorite.create(user_id: 1, drink_id: 2)
+Favorite.create(user_id: 1, drink_id: 5)
+
+
 
 
 

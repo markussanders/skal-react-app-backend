@@ -6,7 +6,9 @@ class UsersController < ApplicationController
     end
     
     def show 
-        user = User.find_by(id: params[:id])
+        p '************************************'
+        p params
+        user = User.find_by(username: params[:username])
         render json: user
     end
 

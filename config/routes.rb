@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :drinks
   resources :favorites
   resources :comments
+
 end
