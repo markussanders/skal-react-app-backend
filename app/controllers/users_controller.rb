@@ -6,10 +6,8 @@ class UsersController < ApplicationController
     end
     
     def show 
-        p '************************************'
-        p params
-        user = User.find_by(username: params[:username])
-        render json: user
+        user = (User.find(params[:id]) ||  User.find_by(username: params[:username]) )
+        render json: user, include: [:favorites]
     end
 
     def new
@@ -21,7 +19,7 @@ class UsersController < ApplicationController
             username: params[:username], 
             password: params[:password], 
             age: params[:age], 
-            barcart: params[:barcart]
+            bar_cart: params[:bar_cart]
         )
         render json: user
     end

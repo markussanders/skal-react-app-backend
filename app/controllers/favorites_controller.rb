@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
     
     def index
         favorites = Favorite.all
-        render json: favorites
+        render json: favorites, inlude: [:drinks]
     end
 
     def create 
