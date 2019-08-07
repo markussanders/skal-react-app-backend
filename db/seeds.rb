@@ -95,7 +95,7 @@ Drink.find_or_create_by(name: 'Old Fashioned', image_url: 'https://cdn.liquor.co
 )
 
 Drink.find_or_create_by(name: 'Gin Martini', 
-  image_url: 'https://behindthebar.com/wp/wp-content/uploads/behindthebar/2017/03/martini-btb-1000x667.jpg', 
+  image_url: 'http://www.pamperedchef.com/iceberg/com/recipe/1445571-lg.jpg', 
   ingredients: ['3 ounces gin (or vodka)' '1/2 ounce dry vermouth' '1 lemon twist or 3 olives skewered on a cocktail pick, for garnish'] , 
   directions:  'Pour gin and vermouth into a shaker filled with ice. Stir and strain into a martini glass. Garnish with lemon twist or olives.'  , 
   tools:  ['martini glass', 'shaker' ], 
