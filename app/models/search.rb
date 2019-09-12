@@ -15,7 +15,7 @@ class Search < ApplicationRecord
         json = JSON.parse(response)
         p 'json = '
         p json
-        json["drinks"].each { |drink| 
+        json["drinks"].map { |drink| 
             new_drink = Drink.find_or_create_by(name: drink["strDrink"])
             new_drink.update(tools: [drink["strGlass"]])
             new_drink.update(directions: drink["strInstructions"])
@@ -25,8 +25,8 @@ class Search < ApplicationRecord
             new_drink.update(ingredients: true_ingredients)
             fake_description = Faker::Lorem.sentence
             new_drink.update(description: fake_description, favorited_count: 0)
+            new_drink
         }
-        json["drinks"]
     end
 
     def self.get_ingredients(drink)
