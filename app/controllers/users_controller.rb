@@ -24,18 +24,19 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    private
-
+    
     def update 
-        user = User.update(
+        user = User.find_by(id: params[:id])
+        user.update(
             name: params[:name], 
             username: params[:username], 
             password: params[:password], 
             age: params[:age], 
-            barcart: params[:barcart]
-        )
-        render json: user
-    end
+            )
+            render json: user
+        end
+        
+    private
 
     def delete
         user = User.find_by(id: params[:id])
