@@ -19,6 +19,7 @@ gem 'jwt'
 gem 'figaro'
 
 gem 'rest-client'
+gem 'faker'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
